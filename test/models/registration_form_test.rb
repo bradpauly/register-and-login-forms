@@ -6,7 +6,8 @@ class RegistrationFormTest < ActiveSupport::TestCase
       name:'Bob Smith',
       email:'bob@example.com',
       password:'testing',
-      password_confirmation:'testing'
+      password_confirmation:'testing',
+      terms: "1"
     }
   end
 
