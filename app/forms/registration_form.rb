@@ -15,7 +15,9 @@ class RegistrationForm
     end unless attributes.nil?
   end
 
-  def process
-    valid?
+  def process(klass)
+    return false unless valid?
+    resource = klass.new(name: name, email: email, password: password)
+    resource.save
   end
 end

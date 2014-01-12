@@ -23,7 +23,7 @@ class RegistrationFormTest < ActiveSupport::TestCase
   end
 
   test "processes valid input" do
-    assert RegistrationForm.new(valid_input).process
-    refute RegistrationForm.new(name:'Bob Smith').process
+    assert RegistrationForm.new(valid_input).process(User)
+    refute RegistrationForm.new(name:'Bob Smith').process(User)
   end
 end
