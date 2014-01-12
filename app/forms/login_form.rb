@@ -1,4 +1,5 @@
 class LoginForm
+  SECRET = 'testing'
   ATTRIBUTES = [:email, :password]
 
   attr_accessor *ATTRIBUTES
@@ -10,15 +11,6 @@ class LoginForm
   end
 
   def process
-    # !password.blank?
-    false
+    !email.blank? && password == SECRET
   end
-  # 
-  # def valid?
-  #   false
-  # end
-
-  # def errors
-  #   []
-  # end
 end

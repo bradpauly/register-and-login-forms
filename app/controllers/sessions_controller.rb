@@ -8,7 +8,7 @@ class SessionsController < ApplicationController
   def create
     @login_form = LoginForm.new(params[:login_form])
 
-    # if user = login(@login.email, @login.password, @login.remember_me)
+    if @login_form.process
       redirect_to root_url
     else
       render action: :new

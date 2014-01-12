@@ -1,2 +1,1 @@
-This is a test rails application that attempts to implement
-a version of form objects.
+This is a test rails application used to practice some OOP principles. The focus is on single responsibility and low dependency between objects.
