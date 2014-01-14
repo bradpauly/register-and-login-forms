@@ -7,12 +7,13 @@ class SessionsControllerTest < ActionController::TestCase
   end
 
   test "redirects for valid credentials" do
-    post :create, login_form: {email:'bob@example.com', password:'testing'}
+    bob = users(:bob)
+    post :create, login_form: { email:bob.email, password:bob.password }
     assert_redirected_to '/'
   end
 
   test "shows form on incomplete input" do
-    post :create, login_form: {email:'bob@example.com'}
+    post :create, login_form: { email:'bob@example.com' }
     assert_response :success
     assert_template :new
   end

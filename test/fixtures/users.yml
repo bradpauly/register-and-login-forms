@@ -1,0 +1,4 @@
+bob:
+  id: 1
+  email: bob@example.com
+  password: testing
