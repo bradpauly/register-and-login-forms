@@ -1,4 +1,6 @@
 bob:
   id: 1
   email: bob@example.com
-  password: testing
+  name: Bob
+  password_salt: 58fb0756fca0ed065fe9b2dd07d8e280
+  password_digest: 2ec7544afbfb414753dd012e24a18eceede89d8226f5d0be146faa762bdaff2ab3f03ce5d53f27af0cfbc621cb978f38e0379b5e5242fea476f0637eca3a448a

@@ -6,7 +6,7 @@ class UserAuthenticatorTest < ActiveSupport::TestCase
   end
 
   test "succeeds with correct password" do
-    user = User.new(password:'testing')
+    user = users(:bob)
     assert UserAuthenticator.new(user).authenticate('testing')
     refute UserAuthenticator.new(user).authenticate('foo')
   end

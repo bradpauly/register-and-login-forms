@@ -8,7 +8,8 @@ class SessionsControllerTest < ActionController::TestCase
 
   test "redirects for valid credentials" do
     bob = users(:bob)
-    post :create, login_form: { email:bob.email, password:bob.password }
+    bob.change_password('testing')
+    post :create, login_form: { email:bob.email, password:'testing' }
     assert_redirected_to '/'
   end
 

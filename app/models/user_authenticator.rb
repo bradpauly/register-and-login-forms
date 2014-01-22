@@ -5,8 +5,7 @@ class UserAuthenticator
     @user = user
   end
 
-  # TODO: Make this work with encrypted passwords.
   def authenticate(password)
-    user && user.password == password
+    user && user.password_matches?(password)
   end
 end
